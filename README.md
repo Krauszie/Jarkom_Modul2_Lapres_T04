@@ -37,7 +37,7 @@ Tambahkan 73.151.10.in-addr.arpa angka `73.151.10` didapat dari byte ke 3 2 dan 
 
 ![gambar](https://user-images.githubusercontent.com/55182321/99149212-37b2b600-26bf-11eb-8909-c665ee351fb1.png)
 
-## 5. 
+## 5. Membuat DNS slave
 
 Pada UML malang ubah  /etc/bind/named.conf.local
 
