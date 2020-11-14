@@ -117,6 +117,14 @@ edit file penanjakan.semerut04.pw menjadi
 
 ![gambar](https://user-images.githubusercontent.com/55182321/99154427-4bbbdf00-26e2-11eb-8aa5-75536ac72b7e.png)
 
+Jika dilihat pada web untuk public, css, images, dan javascript maka,
+
+![gambar](https://user-images.githubusercontent.com/55182321/99155657-74e16d00-26ec-11eb-932a-678bb9d01bd9.png)
+![gambar](https://user-images.githubusercontent.com/55182321/99155662-84f94c80-26ec-11eb-98fd-c17d8ec9f35e.png)
+![gambar](https://user-images.githubusercontent.com/55182321/99155665-90e50e80-26ec-11eb-9819-aec8fd03e135.png)
+![gambar](https://user-images.githubusercontent.com/55182321/99155672-9b070d00-26ec-11eb-9b76-6b9fbbeb483d.png)
+
+
 ## 12. Merubah error page 404 
 
 Untuk merubah, pindah ke /var/www/penanjakan.semerut04.pw lalu membuat .htaccess 
@@ -165,5 +173,14 @@ Menambahkan `Redirect / http://semerut04.pw`  file default pada site available
 ![gambar](https://user-images.githubusercontent.com/55182321/99155479-d1dc2380-26ea-11eb-8e26-d2c0088e0586.png)
 
 
-## 17. 
+## 17. pada /var/www/penanjakan.semeruto4.pw/public/images yang memiliki substring “semeru” akan diarahkan menuju semeru.jpg.
 
+Membuat file .htaccess pada /var/www/penanjakan.semerut04.pw dengan isi
+
+![gambar](https://user-images.githubusercontent.com/55182321/99155559-91c97080-26eb-11eb-9f58-360b6079185f.png)
+
+Jika di cek di web dengan mengakses 123semeru123.jpg, bukansemeruaja.jpg dan mahameru.jpg akan keluar seperti gambar dibawah 
+
+![gambar](https://user-images.githubusercontent.com/55182321/99155591-e53bbe80-26eb-11eb-810b-7299c1efae8f.png)
+![gambar](https://user-images.githubusercontent.com/55182321/99155601-f5ec3480-26eb-11eb-8cf1-6b6df8db1865.png)
+![gambar](https://user-images.githubusercontent.com/55182321/99155615-0c928b80-26ec-11eb-8cf0-5e884173d088.png)
