@@ -49,4 +49,94 @@ Ubah zona malang menjadi type master dan masukan seperti gambar di atas
 
 masukan zona semerut04.pw dengan tipe slave pada /etc/bind/named.conf.local di UML Mojokerto
 
-## 6.
+## 6. Membuat domain gunung.semerut04.pw
+
+Membuat delegasi ns1 dan menuju ke ip mojokerto
+
+![gambar](https://user-images.githubusercontent.com/55182321/99148818-7c891d80-26bc-11eb-9bb4-269653957860.png)
+
+Merubah allow-query pada named.conf.options
+
+![gambar](https://user-images.githubusercontent.com/55182321/99152786-891a6f80-26d6-11eb-8fbd-509f319319fd.png)
+
+Menambahkan allow transfer di zona semeru pada UML malang
+
+![gambar](https://user-images.githubusercontent.com/55182321/99149539-44380e00-26c1-11eb-81c5-cdfe90fabe26.png)
+
+Lalu, setting allow query any dpada UML Mojokerto
+
+![gambar](https://user-images.githubusercontent.com/55182321/99152907-6c326c00-26d7-11eb-95c7-17278113153c.png)
+
+Setelah itu setting allow transfer all pada zona gunung.semerut04.pw di named.conf.local
+
+![gambar](https://user-images.githubusercontent.com/55182321/99152937-abf95380-26d7-11eb-9456-f474cb36cf9d.png)
+
+
+## 7. Menambahkan subdomain naik.gunung.semerut04.pw
+
+Menambahkan subdomain di UML Mojokerto
+
+![gambar](https://user-images.githubusercontent.com/55182321/99152976-ef53c200-26d7-11eb-8aef-45051efc999c.png)
+
+## 8. Mengatur web server 
+
+Mengatur web server di probolinggo pada /etc/apache2/sites-available/semerut04.pw
+
+![gambar](https://user-images.githubusercontent.com/55182321/99153624-12807080-26dc-11eb-9a55-425a9fb3fe2c.png)
+
+menambahkan /var/www pada documentRoot dengan mendownload menggunakan wget dan mengganti nama semerut04.pw
+
+![gambar](https://user-images.githubusercontent.com/55182321/99153680-976b8a00-26dc-11eb-9fda-34099d4c8f69.png)
+
+Jika di cek di website akan terbuka 
+
+![gambar](https://user-images.githubusercontent.com/55182321/99153721-f0d3b900-26dc-11eb-8374-2d135783e388.png)
+
+
+## 9. Aktifkan mod rewrite
+
+Mengaktifkan mod rewrite dan mengedit htaccess di /var/www/semerut04.pw
+
+![gambar](https://user-images.githubusercontent.com/55182321/99153995-f9c58a00-26de-11eb-8e93-60b00a834c16.png)
+
+maka juka di akses semerut04.pw/home akan keluar tanpa memerlukan index.php di urlnya
+
+## 10. membuat web penanjakan .semerut04.pw
+
+Membuat penanjakan pada sites-available 
+
+![gambar](https://user-images.githubusercontent.com/55182321/99154220-b10ed080-26e0-11eb-9a42-3a1e7d675487.png)
+
+mendownload file dari wget 10.151.36.202/penanjakan.semerut04.pw dan mengganti namanya
+
+![gambar](https://user-images.githubusercontent.com/55182321/99154367-cf290080-26e1-11eb-9c9a-fdbc9033e7e1.png)
+
+## 11. Pada /public diperbolehkan directory listing namun yang di dalam publc tidak
+
+edit file penanjakan.semerut04.pw menjadi 
+
+![gambar](https://user-images.githubusercontent.com/55182321/99154427-4bbbdf00-26e2-11eb-8aa5-75536ac72b7e.png)
+
+## 12. Merubah error page 404 
+
+Untuk merubah, pindah ke /var/www/penanjakan.semerut04.pw lalu membuat .htaccess 
+
+![gambar](https://user-images.githubusercontent.com/55182321/99154508-e1f00500-26e2-11eb-8382-05daa50ff7f5.png)
+
+## 13. membuat mod alias dari /javascript menjadi /js
+
+![gambar](https://user-images.githubusercontent.com/55182321/99154427-4bbbdf00-26e2-11eb-8aa5-75536ac72b7e.png)
+
+menambahkan alias di bawah direktory listing
+
+## 14. Membuat web naik.gunung.semerut04.pw
+
+Membuat naik.gunung.semerut04.pw di site available
+
+![gambar](https://user-images.githubusercontent.com/55182321/99154828-63489700-26e5-11eb-83b7-b116ba30b4ab.png)
+
+menambahkan listen 8888 di port.cof pada apache2
+
+![gambar](https://user-images.githubusercontent.com/55182321/99154939-3fd21c00-26e6-11eb-9cdf-78665b9c8e20.png)
+
+## 15. membuat password 
