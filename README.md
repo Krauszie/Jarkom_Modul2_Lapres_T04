@@ -140,3 +140,30 @@ menambahkan listen 8888 di port.cof pada apache2
 ![gambar](https://user-images.githubusercontent.com/55182321/99154939-3fd21c00-26e6-11eb-9cdf-78665b9c8e20.png)
 
 ## 15. membuat password 
+
+Mengguakan command `htpasswd -c /etc/apache2/.htpasswd semeru` dan mengisi passwordnya dengan kuynaikgunung. 
+
+![gambar](https://user-images.githubusercontent.com/55182321/99155201-5f6a4400-26e8-11eb-8bee-6b71c166daf7.png)
+
+Merubah di site-available seperti pada gambar di atas
+
+![gambar](https://user-images.githubusercontent.com/55182321/99155327-7493a280-26e9-11eb-8cde-715c4b47762c.png)
+
+![gambar](https://user-images.githubusercontent.com/55182321/99155342-9bea6f80-26e9-11eb-9a9b-ec9a7e050a16.png)
+
+
+Akan keluar seperti di atas
+
+jika ingin melihat user apa saja serta menampilkan hasil hash nya yang sudah terdaftar menggunakan command `cat /etc/apache2/.htpasswd`
+
+![gambar](https://user-images.githubusercontent.com/55182321/99155380-026f8d80-26ea-11eb-8b1c-c1317317b9e8.png)
+
+## 16. Membuat jika kita mengetikan IP probolinggo akan ke redirect semerut04.pw
+
+Menambahkan `Redirect / http://semerut04.pw`  file default pada site available 
+
+![gambar](https://user-images.githubusercontent.com/55182321/99155479-d1dc2380-26ea-11eb-8e26-d2c0088e0586.png)
+
+
+## 17. 
+
